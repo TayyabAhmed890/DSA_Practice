@@ -1,0 +1,11 @@
+Requirements
+
+Find Duplicates in Array if found return true othervise return false
+
+approach no 1
+
+use nested loops compare the elements each other
+
+approach no 2
+
+first sort the array and then apply a single loop and compare current element to the next element
