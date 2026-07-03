@@ -1,0 +1,21 @@
+3 sum problem
+
+brute force approach is use 3 for loops sum all values and compare with target but its have big O(n3) time complexity and O(1) space complexity
+
+optimal approach
+O(n2) Time complexity and O(1) is space complexity
+
+pseudo code
+
+steps
+
+1) create a function take 2 parameters (array,target)
+2) create a for loop start with 0 index and ends on arr.length-2 (leave 2 for pointers) point the 1st element for find the sum === target
+3) create two pointers left = i+1,right = arr.length-1 for point the 2nd and 3rd elements
+4) create a while loop when (left < right)
+5) add the 1st + second + third elements and store in the variable name sum
+6) check if sum === target return indexes of these elements
+7) else if sum > target (right--)
+8) else if sum < target (left++)
+9) if not found return false
+
