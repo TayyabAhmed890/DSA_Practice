@@ -1,0 +1,26 @@
+Palindrome Problem
+
+Brute Force Approach 
+
+Time: O(n) - Space: O(n)
+
+steps
+1) create an empty array
+2) start a loop in reverse order and push the words in the array
+3) convert this array into string again
+4) compare both word === reverseString
+5) if equal return true othervise return false 
+
+Optimal Approach
+
+Time: O(n) - Space: O(1)
+
+use two pointers Approach
+steps
+
+1) create 2 pointers left = 0 and right = arr.length-1
+2) start a while loop (left < right)
+3) check word[left] !== word[right]
+4) if true return false
+5) left++ and right--
+6) if false return true

@@ -1,29 +1,23 @@
-// palindrome problem
+// Find Max and Min Number in Array
 
-// brute force approach
+let arr = [12, 2, 34, 33, 1, 60];
 
-// Time and space complexity is O(n)
+function FindMinMax(arr) {
+  let MIN = arr[0];
+  let MAX = arr[0];
 
-let word = "tayyat";
-
-function reverseString(word) {
-    let arr = [];
-  for (let i = word.length; i >= 0; i--) {
-    arr.push(word[i]);
-  }
-    let str = arr.join('')
-    return str
-}
-
-let getString = reverseString(word)
-
-function checkPalindrome(word,string) {
-    console.log(`${word} : ${string}`)
-    if(word === string){
-        return true
+  for (let i = 1; i < arr.length; i++) {
+    let val = arr[i];
+    if (val < MIN) {
+      MIN = val;
     }
-    return false
+    if (val > MAX) {
+      MAX = val;
+    }
+  }
+
+  return { MIN, MAX };
 }
 
-let check = checkPalindrome(word,getString)
-console.log(check)
+let check = FindMinMax(arr);
+console.log(check);
