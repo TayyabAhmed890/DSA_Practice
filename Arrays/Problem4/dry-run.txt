@@ -1,1 +1,11 @@
 Find Max and Min in an Array
+
+Steps:
+
+1) create a function
+2) Start a Loop with index 1 to end of the Array
+3) create two variables min,max
+4) assign the values to the variables min = arr[0],max = arr[0]
+5) check if arr[i] > max yes then update the value max = arr[i] 
+6) check if arr[i] < min yes then update the value min = arr[i]
+7) return an object {min,max}
