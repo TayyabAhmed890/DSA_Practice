@@ -1,19 +1,21 @@
 // insertion sort
 
-let arr = [9,4,1,10,8];
+let arr = [9, 4, 1, 10, 8];
 
-for(let i = 1;i < arr.length;i++){
+function InsertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let ptr = i - 1;
 
-    let key = arr[i]
-    let ptr = i-1
-    
-    while(ptr >= 0 && arr[ptr] > key){
-        arr[ptr + 1] = arr[ptr];
-        ptr--;
+    while (ptr >= 0 && arr[ptr] > key) {
+      arr[ptr + 1] = arr[ptr];
+      ptr--;
     }
 
-    arr[ptr+1] = key
+    arr[ptr + 1] = key;
+  }
+  return arr;
 }
 
-console.log(arr)
-
+let sortArr = InsertionSort(arr);
+console.log(sortArr);

@@ -1,0 +1,68 @@
+Insertion Sort
+
+let arr = [9, 4, 1, 10, 8];
+
+Steps:
+
+1) create a function
+2) start a loop with index 1 to end of the Array
+3) create two variables key and ptr
+4) assign values key = arr[i] , ptr = i-1
+5) start a while loop check ptr >= 0 && arr[ptr] > key
+6) in while loop arr[ptr + 1] = arr[ptr]  (copy the value to the next index // [9,9])
+7) move backward to the pointer ptr--
+8) and then after while loop ends arr[ptr + 1] = key (replace the key value with arr[ptr] // [4,9])
+
+Dry-Run
+
+[9,4,1,10,8]
+key = 4
+ptr = 0[9]
+
+condition: ptr >= 0 && arr[ptr] > key
+check: ptr >= 0 (yes:true)
+check: arr[ptr] > key [9 > 4] (yes:true)
+
+in while loop body:
+arr[ptr + 1] = arr[ptr] (before:[9,4],after:[9,9])
+ptr-- (point the previous index again)
+
+then after while loop is executed:
+arr[ptr + 1] = key (before:[9,9],after:[4,9])
+
+the cycles repeats!
+
+[4,9,1,10,8]
+key = 1
+ptr = 1[9]
+
+[4,9,9]
+[4,1,9]
+
+key = 1
+ptr = 0[4]
+
+[4,4,9]
+[1,4,9]
+
+[1,4,9,10,8]
+key = 10
+ptr = 2[9]
+
+[1,4,9,10,8]
+key = 8
+ptr = 3[10]
+
+[1,4,9,10,10]
+[1,4,9,8,10]
+
+key = 8
+ptr = 2[9]
+
+[1,4,9,9,10]
+[1,4,8,9,10] Sorted!
+
+Analysis & Complexity
+
+Time: O(n2)
+Space: O(1)
