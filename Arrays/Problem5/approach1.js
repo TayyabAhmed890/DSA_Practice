@@ -1,28 +1,21 @@
-// Find Vowels in the text
+// Find the Desire Number
 
-let text = "Kotlin";
+let find = 90;
+let numbers = [13,90,23,67,10];
 
-function FindVowels(text) {
-  let count = 0;
-  let char = text.toLowerCase();
-  for (let i = 0; i < text.length; i++) {
-    if (
-      char[i] === "a" ||
-      char[i] === "e" ||
-      char[i] === "i" ||
-      char[i] === "o" ||
-      char[i] === "u"
-    ) {
-      count++;
+function FindNumber(num,search){
+
+    if(typeof search !== "number") return "Invalid Type!";
+
+    for(let i = 0;i < num.length;i++){
+        if(num[i] === search){
+            return `${search} is Found on Index ${i}!`;
+        }
     }
-  }
 
-  if (count === 0) {
-    return "Vowels Not Found!";
-  }
-
-  return `Text: ${char}\nVowels: ${count}`;
+    return "Not Found!"
 }
 
-let checkVowels = FindVowels(text);
-console.log(checkVowels);
+let checkNumber = FindNumber(numbers,find);
+console.log(checkNumber)
+
