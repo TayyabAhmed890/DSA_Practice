@@ -1,0 +1,18 @@
+// search the desired number
+
+Complexity:
+
+Time = O(n)
+Space = O(1)
+
+steps:
+
+1) Get the number
+2) create an array
+3) create a function and take an array and desire number as a input/parameter
+4) a small type check user only allows to input as a number not other type allowed (handle edge case)
+5) start a for loop from start to end
+6) in loop check if(arr[i] === search)
+7) if found return index of this number and tell found!
+8) if not return not found
+
