@@ -15,7 +15,7 @@ function FindSecondLargest(arr) {
     }
   }
 
-  return [largest, secondLargest];
+  return `Largest: ${largest}\nSecond Largest: ${secondLargest}`;
 }
 
 let check = FindSecondLargest(arr);
